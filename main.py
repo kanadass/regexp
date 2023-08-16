@@ -23,6 +23,7 @@ res = [list(OrderedDict.fromkeys(chain(*x))) for x in grouped_list]
 
 position = res[3].pop()
 res[3][4] = position
+res = res[:-1]
 
 with open("phonebook.csv", "w") as f:
     datawriter = csv.writer(f, delimiter=',')
